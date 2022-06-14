@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { Home } from "pages";
 
 export const AppRoutes = () => {
   return(
@@ -9,7 +10,10 @@ export const AppRoutes = () => {
           element={ <Navigate to="/" /> }
         />
 
-        <Route/>
+        <Route
+          path="/"
+          element={<Home/>}
+        />
       </Routes>
     </BrowserRouter>
   )
