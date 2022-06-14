@@ -5,6 +5,7 @@ import { space, SpaceProps, color, ColorProps, layout, LayoutProps, border, Bord
 type ColumnProps = SpaceProps & ColorProps & LayoutProps & BorderProps;
 
 export const Column = styled.div<ColumnProps>`
+  padding: 24px;
   display: flex;
   flex-direction: column;
   ${space}
