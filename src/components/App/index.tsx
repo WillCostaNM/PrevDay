@@ -1,7 +1,10 @@
+import { GlobalStyle } from "styles";
+import { ThemeDefault } from "themes";
+
 export const App = () => {
   return(
-    <div>
-
-    </div>
+    <ThemeDefault>
+      <GlobalStyle/>
+    </ThemeDefault>
   )
 }
