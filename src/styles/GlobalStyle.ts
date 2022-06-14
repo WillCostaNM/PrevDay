@@ -19,6 +19,10 @@ export const GlobalStyle = createGlobalStyle`
         font-size: ${px2vw(16)};
       }
   }
+
+  body{
+    background: ${({theme})=>theme.colors.primary};
+  }
 `;
 
 export default GlobalStyle;
