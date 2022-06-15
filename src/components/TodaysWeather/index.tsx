@@ -1,21 +1,17 @@
 import React from "react";
-import { Column, Row } from "components";
-import styled from "styled-components";
-
+import { Container, Row } from "./styles";
 
 export const TodaysWeather: React.FC = () => {
   return(
-    <Column
-    bg="secondary"
-    >
-      <Row alignItems="center" justifyContent="space-between">
+    <Container>
+      <Row>
         <h4>Today</h4>
         <div>Ter, 14 Jun</div>
       </Row>
-      
-      <Row alignItems="center" justifyContent="space-between">
+
+      <Row mt='20px'>
         <h1>30ºC</h1>
       </Row>
-    </Column>
+    </Container>
   )
 }
