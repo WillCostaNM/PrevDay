@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-
+/* 
   :root{
     font-size: ${px2vw(24)};
 
@@ -18,10 +18,11 @@ export const GlobalStyle = createGlobalStyle`
       @media (min-width: 1024px) {
         font-size: ${px2vw(16)};
       }
-  }
+  } */
 
   body{
     background: ${({theme})=>theme.colors.primary};
+    color: ${({theme})=>theme.colors.text};
   }
 `;
 

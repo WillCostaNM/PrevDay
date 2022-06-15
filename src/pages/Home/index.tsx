@@ -1,9 +1,9 @@
-import { TodaysWeather, Column } from "components";
+import { TodaysWeather, Grid } from "components";
 
 export const Home = () => {
   return (
-    <Column>
+    <Grid p="20px">
       <TodaysWeather/>
-    </Column>
+    </Grid>
   )
 }
