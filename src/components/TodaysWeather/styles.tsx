@@ -10,8 +10,7 @@ export const Container = styled.div`
   padding: 20px;
   grid-column: 1/9;
   
-  @media (min-width: 900px){
-    grid-column: 1/4;
+  @media (min-width: 600px){
   }
 `;
 
