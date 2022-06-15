@@ -1,12 +1,14 @@
-import { TodaysWeather, Grid } from "components";
-import { Container } from "./styles";
+import { TodaysWeather, Grid, Column, Input } from "components";
 
 export const Home = () => {
   return (
-    <Container>
-      <Grid p="20px">
+    <Grid>
+      <Column border="1px solid">
+        <Input mb="20px"/>
         <TodaysWeather/>
-      </Grid>
-    </Container>
+      </Column>
+
+      
+    </Grid>
   )
 }

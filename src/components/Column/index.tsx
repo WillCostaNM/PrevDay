@@ -5,10 +5,8 @@ import { space, SpaceProps, color, ColorProps, layout, LayoutProps, border, Bord
 type ColumnProps = SpaceProps & ColorProps & LayoutProps & BorderProps & FlexboxProps & GridProps;
 
 export const Column = styled.div<ColumnProps>`
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  grid-column: 1/9;
   ${space}
   ${color}
   ${layout}
