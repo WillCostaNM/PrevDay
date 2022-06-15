@@ -10,9 +10,7 @@ export const Container = styled.div`
   background-color: ${({theme})=>theme.colors.secondary};
   padding: 20px;
 
-  /* @media (min-width: 900px){
-    grid-column: 1/3;
-  } */
+  
 `;
 
 export const Row = styled.div<RowProps>`

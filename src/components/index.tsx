@@ -5,3 +5,4 @@ export * from './Row';
 export * from './TodaysWeather';
 export * from './Grid';
 export * from './Input';
+export * from './WeekWeather';

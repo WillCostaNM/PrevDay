@@ -1,6 +1,7 @@
 import { TodaysWeather, Grid, Column, Input } from "components";
 
 export const Home = () => {
+
   return (
     <Grid>
       <Column border="1px solid">
@@ -8,7 +9,8 @@ export const Home = () => {
         <TodaysWeather/>
       </Column>
 
-      
+
     </Grid>
   )
+  
 }

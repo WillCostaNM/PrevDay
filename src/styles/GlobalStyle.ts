@@ -8,9 +8,17 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  
   html{
-    font-size: 62.5%;
+    font-size: 45%;
+    
+    @media screen and (min-width: 768px){
+      font-size: 62.5%;
+    }
+    /* font-size: 50%; */
   }
+
+  
   h1{
     font-size: 3.2rem;
   }

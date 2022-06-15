@@ -6,7 +6,7 @@ type GridProps = SpaceProps;
 export const Grid = styled.div<GridProps>`
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
   max-width: 980px;
   border: 1px solid red;
