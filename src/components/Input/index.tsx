@@ -8,7 +8,7 @@ export const Input = styled.input<InputProps>`
   outline: none;
   border-radius: 12px;
   background: none;
-  font-size: 1.6rem;
+  font-size: 16px;
   padding: 8.5px 20px 8.5px 20px;
   color: ${({theme}) => theme.colors.text};
   ${space}

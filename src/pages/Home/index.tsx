@@ -1,16 +1,18 @@
-import { TodaysWeather, Grid, Column, Input } from "components";
+import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
+import { WeekWrapper, NavWrapper } from "./styles";
 
 export const Home = () => {
 
   return (
     <Grid>
-      <Column border="1px solid">
+      <NavWrapper>
         <Input mb="20px"/>
         <TodaysWeather/>
-      </Column>
+      </NavWrapper>
 
-
+      <WeekWrapper>
+        <WeekWeather/>
+      </WeekWrapper>
     </Grid>
   )
-  
 }

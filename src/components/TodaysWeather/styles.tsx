@@ -7,10 +7,8 @@ export const Container = styled.div`
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  background-color: ${({theme})=>theme.colors.secondary};
+  background-image: linear-gradient(150deg, #7FA9FF, #4e89fd);
   padding: 20px;
-
-  
 `;
 
 export const Row = styled.div<RowProps>`
