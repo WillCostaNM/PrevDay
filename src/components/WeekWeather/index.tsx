@@ -1,5 +1,3 @@
-import { Column } from "components/Column"
-import { Row } from "components/Row"
 import { Container, Day } from "./styles";
 
 export const WeekWeather = () => {

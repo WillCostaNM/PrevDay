@@ -13,6 +13,7 @@ export const Home = () => {
       <WeekWrapper>
         <WeekWeather/>
       </WeekWrapper>
+
     </Grid>
   )
 }
