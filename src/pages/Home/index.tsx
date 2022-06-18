@@ -1,20 +1,20 @@
 import React, { ChangeEvent } from "react";
-import { useSelector } from "react-redux";
-import {State} from "store/reducers";
-
-import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
-
-import { WeekWrapper, NavWrapper } from "./styles";
 import { useEffect, useState } from "react";
-import { Weather } from "interfaces";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import { weatherCreators } from "store/creators";
+import { WeekWrapper, NavWrapper } from "./styles";
+import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
 
 
 export const Home = () => {
 
-  // const weekday = useSelector((state: State) => state.weekday);
+  const dispatch = useDispatch();
+  const {setWeather} = bindActionCreators(weatherCreators, dispatch);
   const [inputValue, setInputValue] = useState('');
-  const [city, setCity] = useState('pontal');
-  const [weather, setWeather] = useState<Weather>();
+  const [city, setCity] = useState('São Paulo');
 
   
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -22,8 +22,9 @@ export const Home = () => {
   }
 
   const handleClick = () => {
-    setCity(inputValue)
+    setCity(inputValue);
   }
+
 
   useEffect(()=>{
     async function getWeather(){
@@ -33,6 +34,7 @@ export const Home = () => {
 
       setWeather(result);
     }
+
     getWeather();
   }, [city]);
 

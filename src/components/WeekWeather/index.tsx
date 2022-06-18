@@ -10,6 +10,9 @@ import {Weather} from "interfaces";
 import { Container, Day } from "./styles";
 
 export const WeekWeather = () => {
+
+  const result = useSelector((state: State) => state.weather);
+
   
   const week = ['mon', 'tue', 'wed', 'the', 'fri', 'sat', 'sun'];
   const dispatch = useDispatch();

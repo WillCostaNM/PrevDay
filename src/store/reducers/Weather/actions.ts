@@ -1,8 +1,9 @@
 import { Type } from "./type";
+import {Weather} from "interfaces";
 
 type SetWeather = {
   type: Type.SET_WEATHER,
-  payload: string
+  payload: Weather
 }
 
 type SetDay = {
