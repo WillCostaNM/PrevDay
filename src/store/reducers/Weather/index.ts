@@ -10,9 +10,12 @@ export const weatherReducer = (state: string = initialState, action: Action) => 
       return action.payload
     break;
 
+    case Type.SET_DAY:
+      return action.payload
+    break;
+
     default:
       return state
     break;
-
   }
 }

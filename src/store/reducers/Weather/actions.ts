@@ -5,4 +5,9 @@ type SetWeather = {
   payload: string
 }
 
-export type Action = SetWeather;
+type SetDay = {
+  type: Type.SET_DAY,
+  payload: string
+}
+
+export type Action = SetWeather | SetDay;

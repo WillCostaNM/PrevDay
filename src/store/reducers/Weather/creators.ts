@@ -10,3 +10,12 @@ export const setWeather = (weather: string) => {
     })
   }
 }
+
+export const setDay = (weekday: string) => {
+  return (dispatch: Dispatch<Action>) => {
+    dispatch({
+      type: Type.SET_DAY,
+      payload: weekday
+    })
+  }
+}
