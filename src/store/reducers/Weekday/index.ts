@@ -1,7 +1,7 @@
 import { Type } from "./type";
 import { Action } from "./actions";
 
-const initialState = '';
+const initialState = 'ola';
 
 export const weekdayReducer = (state: string = initialState, action: Action) => {
   switch (action.type) {

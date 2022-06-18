@@ -4,6 +4,7 @@ import { space, SpaceProps } from "styled-system";
 type InputProps = SpaceProps;
 
 export const Input = styled.input<InputProps>`
+  width: 100%;
   display: inline-block;
   outline: none;
   border-radius: 12px;

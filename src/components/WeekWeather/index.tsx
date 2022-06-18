@@ -1,13 +1,27 @@
+import React, {useEffect, useState} from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import { weekdayCreators } from "store/creators";
+import {State} from "store/reducers";
+import {Weather} from "interfaces";
+
+
 import { Container, Day } from "./styles";
 
 export const WeekWeather = () => {
-
-  const week = ['mon', 'tue', 'wed', 'the', 'fri', 'sat', 'sun']; 
+  
+  const week = ['mon', 'tue', 'wed', 'the', 'fri', 'sat', 'sun'];
+  const dispatch = useDispatch();
+  const {setDay} = bindActionCreators(weekdayCreators, dispatch);
 
   return (
     <Container>
 
-      {week.map((day, index) => <Day key={`week-${index}`}>
+      {week.map((day, index) => <Day
+        key={`week-${index}`}
+        onClick={() => setDay(day)}
+      >
         
         <img src={require("../../assets/WeatherIcons/Camada1.png")} alt="weather-icon" />
 
