@@ -1,14 +1,19 @@
 import { Type } from "./type";
-import {Weather} from "interfaces";
+import {Weather, ErrorWeather} from "interfaces";
+
 
 type SetWeather = {
   type: Type.SET_WEATHER,
-  payload: Weather
+  payload: Weather,
 }
 
-type SetDay = {
-  type: Type.SET_DAY,
-  payload: string
+type SetError = {
+  type: Type.ERROR,
+  error: Error,
 }
 
-export type Action = SetWeather | SetDay;
+type Fetching = {
+  type: Type.FETCHING,
+}
+
+export type Action = SetWeather | SetError | Fetching;

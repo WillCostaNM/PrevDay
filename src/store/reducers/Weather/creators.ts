@@ -1,7 +1,8 @@
 import { Type } from "./type";
 import { Dispatch } from "redux";
 import {Action} from './actions';
-import {Weather} from "interfaces";
+import {Weather, ErrorWeather} from "interfaces";
+
 
 
 export const setWeather = (weather: Weather) => {
@@ -13,11 +14,19 @@ export const setWeather = (weather: Weather) => {
   }
 }
 
-export const setDay = (weekday: string) => {
+export const setError = (error: Error) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
-      type: Type.SET_DAY,
-      payload: weekday
+      type: Type.ERROR,
+      error: error,
+    })
+  }
+}
+
+export const fetching = () => {
+  return (dispatch: Dispatch<Action>) => {
+    dispatch({
+      type: Type.FETCHING
     })
   }
 }

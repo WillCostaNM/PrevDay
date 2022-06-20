@@ -1,4 +1,3 @@
-
 interface Location {
     name: string;
     region: string;
@@ -41,8 +40,6 @@ interface Current {
     gust_mph: number;
     gust_kph: number;
 }
-
-
 
 interface Day {
     maxtemp_c: number;
@@ -123,10 +120,14 @@ interface Forecast {
     forecastday: Forecastday[];
 }
 
-interface RootObject {
+
+export type Weather = {
     location: Location;
     current: Current;
     forecast: Forecast;
 }
 
-export type Weather = RootObject;
+export type ErrorWeather = {
+    code: number,
+    message: string
+}

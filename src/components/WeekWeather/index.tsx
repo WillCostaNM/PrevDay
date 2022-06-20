@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
-import { weatherCreators } from "store/creators";
+import { weekdayCreators } from "store/creators";
 import {State} from "store/reducers";
 import {Weather} from "interfaces";
 
@@ -16,7 +16,7 @@ export const WeekWeather = () => {
   
   const week = ['mon', 'tue', 'wed', 'the', 'fri', 'sat', 'sun'];
   const dispatch = useDispatch();
-  const {setDay} = bindActionCreators(weatherCreators, dispatch);
+  const {setDay} = bindActionCreators(weekdayCreators, dispatch);
 
   return (
     <Container>
