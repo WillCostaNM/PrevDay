@@ -6,18 +6,13 @@ import { Container, Row } from "./styles";
 
 
 export const TodaysWeather: React.FC = () => {
-  
-  const {isLoading, error, payload: weather} = useSelector((state: State) => state.weather);
-  
-  console.log(weather?.current)
-  
-  // const { location: {localtime}, current, forecast } = weather;
 
-  // const localTime = localtime;
+  const {payload: weather, isLoading, error} = useSelector((state: State) => state.weather);
+  const {location: {localtime = ''} = {}, current: {} = {}} = weather || {};
 
-  // const dateObj = new Date(localTime);
 
-  // console.log(dateObj);
+  const dateObj = new Date(localtime);
+  const dayNameShort = dateObj.toLocaleString('pt-BR', {weekday: "short"})
 
   return(
     <Container>
@@ -32,7 +27,7 @@ export const TodaysWeather: React.FC = () => {
 
       <Row mt='20px'>
         <h4>Today</h4>
-        {/* <div>{weather?.location.localtime} </div> */}
+        <div>{dayNameShort}</div>
       </Row>
 
       <Row mt='20px'>

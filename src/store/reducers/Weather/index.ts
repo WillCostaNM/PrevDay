@@ -15,20 +15,20 @@ const initialState: ResponseType = {
   payload: undefined
 };
 
-export const weatherReducer: Reducer<ResponseType> = (state = initialState, action: Action) => {
+export const weatherReducer = (state = initialState, action: Action): ResponseType => {
 
   switch (action.type){
 
     case Type.SET_WEATHER:
-      return {isLoading: false, error: undefined, payload: action.payload}
+      return {...state, isLoading: false, payload: action.payload}
     break;
 
     case Type.ERROR:
-      return {isLoading: false, error: action.error, payload: undefined}
+      return {...state, isLoading: false, error: action.error}
     break;
 
     case Type.FETCHING:
-      return {isLoading: true, error: undefined, payload: undefined}
+      return {...state}
     break;
 
     default:
