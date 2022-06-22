@@ -14,7 +14,7 @@ export const setWeather = (weather: Weather) => {
   }
 }
 
-export const setError = (error: Error) => {
+export const setError = (error: ErrorWeather) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
       type: Type.ERROR,

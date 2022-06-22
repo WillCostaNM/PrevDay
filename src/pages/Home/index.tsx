@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
-import {ErrorWeather, Weather} from "interfaces";
+import {ErrorWeather, ResponseError, Weather} from "interfaces";
 import { weatherCreators } from "store/creators";
 import { WeekWrapper, NavWrapper } from "./styles";
 import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
@@ -33,46 +33,50 @@ export const Home = () => {
 
       try {
 
-        const { data } = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a6526d8cb04e4ea1a4d211021221306&q=${city}&days=7&lang=pt`);
+        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a6526d8cb04e4ea1a4d211021221306&q=${city}&days=7&lang=pt`);
 
-        setWeather(data);
 
-      } catch (error) {
-        
-        const { response } = error as AxiosError;
+        const weather = response.data as Weather;
 
         
-      }
+        setWeather(weather);
 
-      // try {
+      } catch (e) {
 
-      //   const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=a6526d8cb04e4ea1a4d211021221306&q=${city}&days=7&lang=pt`);
-    
-      //   const result = await response.json();
+        const Err = (isRequestError: boolean, message: string, code: string | undefined) => {
+          return {
+            isRequestError: isRequestError, 
+            message: message, 
+            code: code
+          }
+        }
 
-      //   if(!response.ok){
-      //     const error: ErrorWeather = result.error;
+        const error = e as AxiosError;
 
-      //     const erro = new Error(`Error Code: ${error.code} - ${error.message}`) 
+        const { response } = error;
 
-      //     setError(erro)
+
+        if (!response){
+
+          const requestError = Err(true, error.message, error.code);
+
+          console.log(requestError);
+         
+          setError(requestError);
+
+        }else{
+
+          let {error} = response.data as ResponseError;
+
+          const {message, code} = error
+
+          const responseError = Err(false, message, code); 
+
+          setError(responseError);
           
-      //   }else{
+        }
 
-      //     setWeather(result);
-
-      //   }
-        
-      // } catch (error) {
-
-        
-      //   // console.log(error.status);
-        
-      //   // const catchError = error as Error;
-        
-      //   // setError(catchError)
-
-      // }
+      }
     }
 
     getWeather();

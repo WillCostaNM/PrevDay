@@ -7,9 +7,14 @@ type SetWeather = {
   payload: Weather,
 }
 
+// type SetError = {
+//   type: Type.ERROR,
+//   error: Error,
+// }
+
 type SetError = {
   type: Type.ERROR,
-  error: Error,
+  error: ErrorWeather
 }
 
 type Fetching = {
