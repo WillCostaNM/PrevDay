@@ -11,8 +11,11 @@ import { Container, Day } from "./styles";
 
 export const WeekWeather = () => {
 
-  const result = useSelector((state: State) => state.weather);
+  const {payload: weather, isLoading, error} = useSelector((state: State) => state.weather);
 
+  const {forecast: { forecastday = [] } = {}} = weather || {};
+  
+  console.log(forecastday);
   
   const week = ['mon', 'tue', 'wed', 'the', 'fri', 'sat', 'sun'];
   const dispatch = useDispatch();
@@ -20,14 +23,14 @@ export const WeekWeather = () => {
 
   return (
     <Container>
-      {week.map((day, index) => <Day
+      {forecastday.map((day, index) => <Day
         key={`week-${index}`}
-        onClick={() => setDay(day)}
+        // onClick={() => setDay(day)}
       >
         
         <img src={require("../../assets/WeatherIcons/Camada1.png")} alt="weather-icon" />
 
-        <h4>{day}</h4>
+        <h4>nome do dia da semana</h4>
 
         <h4>3ºC</h4>
 
