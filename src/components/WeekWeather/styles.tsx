@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 
+
+
 type ContainerProps = SpaceProps;
 
 export const Container = styled.div<ContainerProps>`
@@ -14,6 +16,7 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const Day = styled.div`
+
   display: flex;
   padding: 16px;
   background-color: ${({theme}) => theme.colors.secondary};

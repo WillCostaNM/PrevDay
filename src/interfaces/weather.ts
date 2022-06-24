@@ -120,8 +120,6 @@ interface Forecast {
   forecastday: Forecastday[];
 }
 
-
-
 export type Weather = {
   location: Location;
   current: Current;
@@ -140,4 +138,3 @@ export type ErrorWeather = {
   code: string | undefined,
   message: string
 }
-

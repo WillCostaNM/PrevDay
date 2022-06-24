@@ -11,30 +11,57 @@ import { Container, Day } from "./styles";
 
 export const WeekWeather = () => {
 
+  const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+  const getDayNameShort = (date: string) => {
+    const dateObj = new Date(`${date} 00:00:00`);
+    const dayNameShort = capitalize(dateObj.toLocaleString('pt-BR', {weekday: "short"})).replace(/\./gi, "");
+    return dayNameShort;
+  }
   const {payload: weather, isLoading, error} = useSelector((state: State) => state.weather);
-
   const {forecast: { forecastday = [] } = {}} = weather || {};
+
   
-  console.log(forecastday);
   
-  const week = ['mon', 'tue', 'wed', 'the', 'fri', 'sat', 'sun'];
+  const [weekday, setWeekday] = useState('');
   const dispatch = useDispatch();
   const {setDay} = bindActionCreators(weekdayCreators, dispatch);
 
+  useEffect(()=>{
+
+    if(!weekday){
+      forecastday.map(({date}, index) => {
+        if (index === 0){
+          setWeekday(getDayNameShort(date));
+        }
+      });
+    }
+    
+    setDay(weekday)
+
+  }, [forecastday, weekday]);
+  
+
+
   return (
     <Container>
-      {forecastday.map((day, index) => <Day
-        key={`week-${index}`}
-        // onClick={() => setDay(day)}
-      >
+      {forecastday.map(({date, day: {avgtemp_c, condition: {icon}}}, index) => {
+        const dayName = getDayNameShort(date);
         
-        <img src={require("../../assets/WeatherIcons/Camada1.png")} alt="weather-icon" />
+        return(
+          <Day
+            id={dayName.toLowerCase()}
+            key={`weekday-${dayName}`}
+            onClick={() => setWeekday(dayName)}
+          >
 
-        <h4>nome do dia da semana</h4>
+            <img src={icon} alt="weather-icon" />
 
-        <h4>3ºC</h4>
+            <h4>{dayName}</h4>
 
-      </Day>)}
+            <h4>{`${Math.floor(avgtemp_c)}ºC`}</h4>
+          </Day>)}
+        )
+      }
     </Container>
   )
 }
