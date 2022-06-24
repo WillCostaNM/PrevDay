@@ -52,6 +52,7 @@ export const WeekWeather = () => {
             id={dayName.toLowerCase()}
             key={`weekday-${dayName}`}
             onClick={() => setWeekday(dayName)}
+            weekday={weekday.toLowerCase()}
           >
 
             <img src={icon} alt="weather-icon" />

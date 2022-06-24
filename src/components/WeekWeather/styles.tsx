@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 
-
+type DayProps = {
+  weekday: string,
+}
 
 type ContainerProps = SpaceProps;
 
@@ -15,11 +17,11 @@ export const Container = styled.div<ContainerProps>`
   }
 `;
 
-export const Day = styled.div`
+export const Day = styled.div<DayProps>`
 
   display: flex;
   padding: 16px;
-  background-color: ${({theme}) => theme.colors.secondary};
+  background-color: ${({theme, id, weekday}) => id === weekday ? "#fff" : theme.colors.secondary};
   border-radius: 12px;
   align-items: center;
 
