@@ -21,6 +21,8 @@ export const Home = () => {
   useEffect(()=>{
 
     async function getWeather(){
+      
+      fetching()
 
       try {
         const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a6526d8cb04e4ea1a4d211021221306&q=${city}&days=7&lang=pt`);
