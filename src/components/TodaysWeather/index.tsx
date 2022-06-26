@@ -29,7 +29,7 @@ export const TodaysWeather: React.FC = () => {
       {!error?.isRequestError && <div>{error?.message}</div>} */}
 
       <Row>
-        {/* <h3>{isLoading ? '. . .' : weather?.location?.name}</h3> */}
+        <h3>{isLoading ? '. . .' : weather?.location?.name}</h3>
       </Row>
 
       <Row mt='20px'>

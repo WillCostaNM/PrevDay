@@ -28,7 +28,7 @@ export const weatherReducer = (state = initialState, action: Action): ResponseTy
     break;
 
     case Type.FETCHING:
-      return {...state}
+      return {...state, isLoading: true}
     break;
 
     default:
