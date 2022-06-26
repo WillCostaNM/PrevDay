@@ -21,8 +21,11 @@ export const Day = styled.div<DayProps>`
 
   display: flex;
   padding: 16px;
-  background-color: ${({theme, id, weekday}) => id === weekday ? "#fff" : theme.colors.secondary};
+  background-color: ${({theme, id, weekday}) => theme.colors.secondary};
   border-radius: 12px;
+
+  background-image: ${({id, weekday}) => id === weekday ? 'linear-gradient(150deg, #7FA9FF, #4e89fd)' : ''};
+
   align-items: center;
 
   & img{

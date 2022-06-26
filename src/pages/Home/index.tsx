@@ -10,6 +10,7 @@ import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
 import axios, { AxiosError } from "axios";
 
 
+// CRIAR ESQUEMA DE PASTA UTILS !!!!!!
 export const Home = () => {
 
   const dispatch = useDispatch();
@@ -32,15 +33,11 @@ export const Home = () => {
     async function getWeather(){
 
       try {
-
         const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a6526d8cb04e4ea1a4d211021221306&q=${city}&days=7&lang=pt`);
 
-
         const weather = response.data as Weather;
-
         
         setWeather(weather);
-
       } catch (e) {
 
         const Err = (isRequestError: boolean, message: string, code: string | undefined) => {
@@ -59,13 +56,10 @@ export const Home = () => {
         if (!response){
 
           const requestError = Err(true, error.message, error.code);
-
-          console.log(requestError);
          
           setError(requestError);
 
         }else{
-
           let {error} = response.data as ResponseError;
 
           const {message, code} = error
@@ -73,7 +67,6 @@ export const Home = () => {
           const responseError = Err(false, message, code); 
 
           setError(responseError);
-          
         }
 
       }
