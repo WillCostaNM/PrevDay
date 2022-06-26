@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 
-type RowProps = SpaceProps;
+// type RowProps = SpaceProps;
 
 export const NavWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+
   @media (min-width: 680px) {
+    background-color: ${ ({theme}) => theme.colors.secondary};
+    padding: 20px;
     border: 1px solid green;
     grid-row: 1/3;
-}
+  }
 `;
 
 
@@ -22,6 +25,6 @@ export const WeekWrapper = styled.div`
 
   @media (min-width: 680px) {
     border: 1px solid green;
-    grid-column: auto / span 2;
+    grid-column: auto / span 1;
   }
 `;

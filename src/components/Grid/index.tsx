@@ -9,10 +9,15 @@ export const Grid = styled.div<GridProps>`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
-  max-width: 980px;
+  max-width: 780px;
   border: 1px solid red;
   margin: auto;
-  grid-gap: 16px;
+  gap: 20px;
+  @media (min-width: 680px) {
+    padding: 0;
+
+  }
+
 /*   
   @media (min-width: 900px){
     max-width: 1000px;

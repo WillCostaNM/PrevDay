@@ -17,8 +17,9 @@ export const Container = styled.div<ContainerProps>`
   }
 `;
 
-export const Day = styled.div<DayProps>`
 
+export const Day = styled.div<DayProps>`
+  cursor: pointer;
   display: flex;
   padding: 16px;
   background-color: ${({theme, id, weekday}) => theme.colors.secondary};
@@ -39,5 +40,4 @@ export const Day = styled.div<DayProps>`
       max-width: 100%;
     }
   }
-
 `;
