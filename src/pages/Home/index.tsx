@@ -6,15 +6,16 @@ import { bindActionCreators } from "redux";
 import {ErrorWeather, ResponseError, Weather} from "interfaces";
 import { weatherCreators } from "store/creators";
 import { WeekWrapper, NavWrapper } from "./styles";
-import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
 import axios, { AxiosError } from "axios";
 
+import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
 
 // CRIAR ESQUEMA DE PASTA UTILS !!!!!!
 export const Home = () => {
 
   const dispatch = useDispatch();
   const {setWeather, setError, fetching} = bindActionCreators(weatherCreators, dispatch);
+
   const [inputValue, setInputValue] = useState('');
   const [city, setCity] = useState('Sao Paulo');
 

@@ -15,7 +15,6 @@ export const Grid = styled.div<GridProps>`
   gap: 20px;
   @media (min-width: 680px) {
     padding: 0;
-
   }
 
 /*   
