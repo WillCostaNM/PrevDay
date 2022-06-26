@@ -8,7 +8,7 @@ import { weatherCreators } from "store/creators";
 import { WeekWrapper, NavWrapper } from "./styles";
 import axios, { AxiosError } from "axios";
 
-import { TodaysWeather, Grid, Column, Input, WeekWeather } from "components";
+import { TodaysWeather, Grid, Column, Input, WeekWeather, Search, Row } from "components";
 
 // CRIAR ESQUEMA DE PASTA UTILS !!!!!!
 export const Home = () => {
@@ -16,18 +16,7 @@ export const Home = () => {
   const dispatch = useDispatch();
   const {setWeather, setError, fetching} = bindActionCreators(weatherCreators, dispatch);
 
-  const [inputValue, setInputValue] = useState('');
   const [city, setCity] = useState('Sao Paulo');
-
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  }
-
-  const handleClick = () => {
-    setCity(inputValue);
-  }
-
 
   useEffect(()=>{
 
@@ -81,8 +70,9 @@ export const Home = () => {
   return (
     <Grid>
       <NavWrapper>
-        <Input onChange={handleChange} mb="20px"/>
-        <button onClick={handleClick}>Submit</button>
+        <Column mb={'20px'}>
+          <Search setState={setCity}/>
+        </Column>
         <TodaysWeather/>
       </NavWrapper>
 

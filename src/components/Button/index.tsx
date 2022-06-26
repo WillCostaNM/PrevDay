@@ -5,7 +5,7 @@ import { layout, LayoutProps, space, SpaceProps, color, ColorProps } from "style
 type ButtonProps = LayoutProps & SpaceProps & ColorProps;
 
 export const Button = styled.button<ButtonProps>`
-  background-color: ${({theme}) => theme.colors.primary};
+  background-color: ${({theme}) => theme.colors.text};
   color: ${({theme}) => theme.colors.secondary};
   padding: 10px 20px;
   border-radius: 4px;
