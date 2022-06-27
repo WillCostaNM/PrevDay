@@ -5,10 +5,10 @@ import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import {ErrorWeather, ResponseError, Weather} from "interfaces";
 import { weatherCreators } from "store/creators";
-import { WeekWrapper, NavWrapper } from "./styles";
 import axios, { AxiosError } from "axios";
 
-import { TodaysWeather, Grid, Column, Input, WeekWeather, Search, Row } from "components";
+import { WeekWrapper, NavWrapper } from "./styles";
+import { TodaysWeather, Grid, Column, Input, WeekWeather, Search, Row, MoreDetailsWeather } from "components";
 
 // CRIAR ESQUEMA DE PASTA UTILS !!!!!!
 export const Home = () => {
@@ -80,6 +80,7 @@ export const Home = () => {
 
       <WeekWrapper>
         <WeekWeather/>
+        <MoreDetailsWeather/>
       </WeekWrapper>
     </Grid>
   )

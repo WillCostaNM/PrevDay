@@ -47,6 +47,8 @@ export const WeekWeather = () => {
       {forecastday.map(({date, day: {avgtemp_c, condition: {icon}}}, index) => {
         const dayName = getDayNameShort(date);
         
+        // AUMENTAR O GAP 
+
         return(
           <Day
             id={dayName.toLowerCase()}

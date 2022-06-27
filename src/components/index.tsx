@@ -7,3 +7,4 @@ export * from './Grid';
 export * from './Input';
 export * from './WeekWeather';
 export * from './Search';
+export * from './MoreDetailsWeather';

@@ -10,7 +10,7 @@ type ContainerProps = SpaceProps;
 export const Container = styled.div<ContainerProps>`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 8px;
+  grid-gap: 16px;
 
   @media (min-width: 680px) {
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));

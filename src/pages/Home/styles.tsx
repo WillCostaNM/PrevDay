@@ -9,22 +9,21 @@ export const NavWrapper = styled.div`
   flex-direction: column;
 
   @media (min-width: 680px) {
-    background-color: ${ ({theme}) => theme.colors.secondary};
-    padding: 20px;
-    border: 1px solid green;
     grid-row: 1/3;
+    border: 1px solid green;
   }
 `;
 
 
 export const WeekWrapper = styled.div`
+  display: grid;
+  gap: 16px;
+  
   width: 100%;
-  display: flex;
-  flex-direction: column;
   grid-column: 1/2;
 
   @media (min-width: 680px) {
     border: 1px solid green;
-    grid-column: auto / span 1;
+    grid-column: 3 / span 6;
   }
 `;
