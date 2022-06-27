@@ -14,14 +14,15 @@ export const Search: React.FC<SearchProps> = ({setState}) => {
     setInputValue(e.target.value);
   }
 
-  const handleClick = () => {
-    setState(inputValue);
-  }
-
   return(
-    <Row>
-      <Input onChange={handleChange} />
-      <Button onClick={handleClick}>T</Button>
-    </Row>
+    <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setState(inputValue);
+    }}>
+      <Row>
+        <Input onChange={handleChange} />
+        <Button type="submit">T</Button>  
+      </Row>
+    </form>
   )
 }
