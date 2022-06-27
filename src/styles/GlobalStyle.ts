@@ -48,6 +48,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     background: ${({theme})=>theme.colors.primary};
     color: ${({theme})=>theme.colors.text};
+    font-family: Arial, Helvetica, sans-serif;
   }
 `;
 
