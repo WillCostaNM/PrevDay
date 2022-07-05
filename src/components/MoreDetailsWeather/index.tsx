@@ -56,7 +56,7 @@ export const MoreDetailsWeather = () => {
       case 'Waxing Crescent':
         return(
           <>
-            <span>&#x1F312;</span> Lua Crescente
+            <span>&#x1F312;</span> Lua Cresc.te
           </>
         )
       break;
@@ -64,7 +64,7 @@ export const MoreDetailsWeather = () => {
       case 'First Quarter':
         return(
           <>
-            <span>&#x1F313;</span> Quarto Crescente
+            <span>&#x1F313;</span> Quarto Cresc.te
           </>
         )
       break;
@@ -72,7 +72,7 @@ export const MoreDetailsWeather = () => {
       case 'Waxing Gibbous':
         return(
           <>
-            <span>&#x1F314;</span> Crescente Gibosa
+            <span>&#x1F314;</span> Cresc.te Gibosa
           </>
         )
       break;
@@ -88,17 +88,25 @@ export const MoreDetailsWeather = () => {
       case 'Waning Gibbous':
         return(
           <>
-            <span>&#x1F316;</span> Minguante Gibosa
+            <span>&#x1F316;</span> Ming. Gibosa
           </>
         )
       break;
 
       case 'Last Quarter':
-        return '&#x1F317; Quarto Minguante'
+        return(
+          <>
+            <span>&#x1F317;</span> Quarto Ming.
+          </>
+        )
       break;
 
       case 'Waning Crescent':
-        return '&#x1F318; Lua Minguante'
+        return(
+          <>
+            <span>&#x1F318;</span> Lua Ming.
+          </>
+        )
       break;
     
       default:

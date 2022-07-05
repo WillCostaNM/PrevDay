@@ -7,8 +7,8 @@ import {ErrorWeather, ResponseError, Weather} from "interfaces";
 import { weatherCreators } from "store/creators";
 import axios, { AxiosError } from "axios";
 
-import { WeekWrapper, NavWrapper } from "./styles";
-import { TodaysWeather, Grid, Column, Input, WeekWeather, Search, Row, MoreDetailsWeather } from "components";
+import { WeekWrapper, NavWrapper, Grid } from "./styles";
+import { TodaysWeather, Column, Input, WeekWeather, Search, Row, MoreDetailsWeather } from "components";
 
 // CRIAR ESQUEMA DE PASTA UTILS !!!!!!
 export const Home = () => {

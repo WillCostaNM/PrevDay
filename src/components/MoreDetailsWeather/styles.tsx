@@ -23,27 +23,26 @@ export const Detail = styled.div`
     font-size: 1.5rem;
     border: 1px solid green;
     margin-top: 8px;
+    align-items: center;
+
+    span:first-child{
+      margin-right: 4px;
+    }
   }
 `;
 
 export const Temperature = styled(Detail)`
   border-left: 6px solid red;
-  & div span:first-child{
-    margin-right: 8px
-  }
+ 
 `;
 
 export const Rain = styled(Detail)`
   border-left: 6px solid #B7B6B6;
-  div{
-    align-items: center;
-    span{
-      font-size: 1.2rem;
-      width: 3.2rem;
-      display: flex;
-      justify-content: space-between;
-      margin-right: 8px
-    }
+  span{
+    font-size: 1.2rem;
+    width: 3.2rem;
+    display: flex;
+    justify-content: space-between;
   }
 `; 
 
@@ -53,9 +52,6 @@ export const Wind = styled(Detail)`
 
 export const AirHumidity = styled(Detail)`
   border-left: 6px solid #90CBF8;
-  span{
-    margin-right: 8px
-  }
 `; 
 
 export const Sun = styled(Detail)`
@@ -64,5 +60,11 @@ export const Sun = styled(Detail)`
 
 export const Mooon = styled(Detail)`
   border-left: 6px solid #C1CBCF;
+  div{
+    font-size: 1.1rem;
+  }
+  span{
+    font-size: 1.5rem;
+  }
 `; 
 
