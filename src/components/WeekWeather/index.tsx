@@ -17,11 +17,12 @@ export const WeekWeather = () => {
     const dayNameShort = capitalize(dateObj.toLocaleString('pt-BR', {weekday: "short"})).replace(/\./gi, "");
     return dayNameShort;
   }
+
   const {payload: weather, isLoading, error} = useSelector((state: State) => state.weather);
   const {forecast: { forecastday = [] } = {}} = weather || {};
 
-  
-  
+
+
   const [weekday, setWeekday] = useState('');
   const dispatch = useDispatch();
   const {setDay} = bindActionCreators(weekdayCreators, dispatch);
@@ -31,7 +32,7 @@ export const WeekWeather = () => {
     if(!weekday){
       forecastday.map(({date}, index) => {
         if (index === 0){
-          setWeekday(getDayNameShort(date));
+          setWeekday(date);
         }
       });
     }
@@ -51,10 +52,10 @@ export const WeekWeather = () => {
 
         return(
           <Day
-            id={dayName.toLowerCase()}
+            id={date}
             key={`weekday-${dayName}`}
-            onClick={() => setWeekday(dayName)}
-            weekday={weekday.toLowerCase()}
+            onClick={() => setWeekday(date)}
+            weekday={weekday}
           >
 
             <img src={icon} alt="weather-icon" />

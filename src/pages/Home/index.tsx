@@ -25,7 +25,7 @@ export const Home = () => {
       fetching()
 
       try {
-        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a6526d8cb04e4ea1a4d211021221306&q=${city}&days=7&lang=pt`);
+        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=7&lang=pt`);
 
         const weather = response.data as Weather;
         

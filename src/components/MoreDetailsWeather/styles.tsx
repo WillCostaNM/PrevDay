@@ -11,6 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Detail = styled.div`
+  padding: 8px 0 8px 0;
   padding-left: 5px;
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@ export const Detail = styled.div`
   border-left: 6px solid red;
   white-space: nowrap;
   & div{
+    font-size: 1.5rem;
     border: 1px solid green;
     margin-top: 8px;
   }
@@ -26,13 +28,23 @@ export const Detail = styled.div`
 
 export const Temperature = styled(Detail)`
   border-left: 6px solid red;
-  & div{
-    
+  & div span:first-child{
+    margin-right: 8px
   }
 `;
 
 export const Rain = styled(Detail)`
   border-left: 6px solid #B7B6B6;
+  div{
+    align-items: center;
+    span{
+      font-size: 1.2rem;
+      width: 3.2rem;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 8px
+    }
+  }
 `; 
 
 export const Wind = styled(Detail)`
@@ -41,6 +53,9 @@ export const Wind = styled(Detail)`
 
 export const AirHumidity = styled(Detail)`
   border-left: 6px solid #90CBF8;
+  span{
+    margin-right: 8px
+  }
 `; 
 
 export const Sun = styled(Detail)`

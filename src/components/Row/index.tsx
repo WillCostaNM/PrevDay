@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { space, SpaceProps, layout, LayoutProps, flexbox, FlexboxProps, border, BorderProps} from "styled-system";
+import { space, SpaceProps, layout, LayoutProps, flexbox, FlexboxProps, border, BorderProps, fontSize, FontSizeProps} from "styled-system";
 
-type RowProps = SpaceProps & LayoutProps & FlexboxProps & BorderProps;
+type RowProps = SpaceProps & LayoutProps & FlexboxProps & BorderProps & FontSizeProps;
 
 export const Row = styled.div<RowProps>`
   display: flex;
@@ -10,4 +10,5 @@ export const Row = styled.div<RowProps>`
   ${layout}
   ${flexbox}
   ${border}
+  ${fontSize}
 `;

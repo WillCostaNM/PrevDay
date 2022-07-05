@@ -108,7 +108,7 @@ interface Hour {
   uv: number;
 }
 
-interface Forecastday {
+export interface Forecastday {
   date: string;
   date_epoch: number;
   day: Day;
