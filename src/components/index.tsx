@@ -8,3 +8,6 @@ export * from './Input';
 export * from './WeekWeather';
 export * from './Search';
 export * from './MoreDetailsWeather';
+export * from './Weekday';
+export * from './WeatherDetails';
+export * from './CityList';

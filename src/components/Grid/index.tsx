@@ -9,7 +9,6 @@ export const Grid = styled.div<GridProps>`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
-  border: 1px solid red;
   margin: auto;
   gap: 20px;
   @media (min-width: 680px) {

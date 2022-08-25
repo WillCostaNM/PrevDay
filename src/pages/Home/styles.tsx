@@ -9,11 +9,10 @@ export const Grid = styled.div<GridProps>`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
-  border: 1px solid red;
   margin: auto;
   gap: 20px;
   
-  @media (min-width: 680px) {
+  @media (min-width: 682px) {
     max-width: 780px;
   }
 
@@ -26,9 +25,8 @@ export const NavWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 680px) {
+  @media (min-width: 682px) {
     grid-row: 1/3;
-    border: 1px solid green;
   }
 `;
 
@@ -40,8 +38,13 @@ export const WeekWrapper = styled.div`
   width: 100%;
   grid-column: 1/2;
 
-  @media (min-width: 680px) {
-    border: 1px solid green;
-    grid-column: 3 / span 6;
+  @media (min-width: 682px) {
+    grid-column: 3 / span 10;
+  }
+`;
+
+export const MoreDetailsWrapper = styled.div`
+  @media (max-width: 681px) {
+    display: none;
   }
 `;

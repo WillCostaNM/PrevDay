@@ -12,7 +12,6 @@ export const Button = styled.button<ButtonProps>`
   border: none;
   cursor: pointer;
   transition: 0.3s;
-
   &:hover{
     box-shadow: inset 0 0 0 10em rgba(0, 0, 0, 0.4);
   }

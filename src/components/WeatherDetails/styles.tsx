@@ -4,6 +4,7 @@ import styled from "styled-components";
 // type GridProps = SpaceProps;
 
 export const Container = styled.div`
+  width: 100%;
   margin-top: 20px;
   display: grid;
   gap: 8px;
@@ -16,12 +17,10 @@ export const Detail = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid red;
   border-left: 6px solid red;
   white-space: nowrap;
   & div{
     font-size: 1.5rem;
-    border: 1px solid green;
     margin-top: 8px;
     align-items: center;
 
