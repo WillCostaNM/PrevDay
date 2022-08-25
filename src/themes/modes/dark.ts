@@ -5,5 +5,6 @@ export const dark = {
     secondary: '#0E1A40',
     tertiary: '#03318C',
     text: 'rgb(255, 255, 255)'
+    
   },
 };
