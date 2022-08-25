@@ -33,6 +33,7 @@ export const Home = () => {
   //   getCities();
   // }, [searchValue]);
 
+  const apiSecret = process.env.REACT_APP_API_KEY;
 
   useEffect(()=>{
 
@@ -41,7 +42,7 @@ export const Home = () => {
       fetching()
 
       try {
-        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=7&lang=pt`);
+        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiSecret}&q=${city}&days=7&lang=pt`);
 
         const weather = response.data as Weather;
         
