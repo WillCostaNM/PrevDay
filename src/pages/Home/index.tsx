@@ -7,7 +7,7 @@ import {ErrorWeather, ResponseError, Weather, Location} from "interfaces";
 import { weatherCreators } from "store/creators";
 import axios, { AxiosError } from "axios";
 
-import { WeekWrapper, NavWrapper, Grid, MoreDetailsWrapper } from "./styles";
+import { Container, WeekWrapper, NavWrapper, Grid, MoreDetailsWrapper } from "./styles";
 import { TodaysWeather, Column, Input, WeekWeather, Search, Row, MoreDetailsWeather } from "components";
 
 // CRIAR ESQUEMA DE PASTA UTILS !!!!!!
@@ -88,22 +88,25 @@ export const Home = () => {
 
 
   return (
-    <Grid>
-      <NavWrapper>
-        <Column mb={'20px'}>
-          <Search setState={setCity}/>
-        </Column>
-        <TodaysWeather/>
-      </NavWrapper>
+    <Container>
+      <h1>PrevDay</h1>
+      <Grid>
+        <NavWrapper>
+          <Column mb={'20px'}>
+            <Search setState={setCity}/>
+          </Column>
+          <TodaysWeather/>
+        </NavWrapper>
 
-      <WeekWrapper>
-        <WeekWeather/>
+        <WeekWrapper>
+          <WeekWeather/>
 
-        <MoreDetailsWrapper>
-          <MoreDetailsWeather/>
-        </MoreDetailsWrapper>
-        
-      </WeekWrapper>
-    </Grid>
+          <MoreDetailsWrapper>
+            <MoreDetailsWeather/>
+          </MoreDetailsWrapper>
+          
+        </WeekWrapper>
+      </Grid>
+    </Container>
   )
 }

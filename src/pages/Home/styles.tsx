@@ -3,13 +3,22 @@ import { space, SpaceProps } from "styled-system";
 
 type GridProps = SpaceProps;
 
+export const Container = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 40px;
+`;
+
 export const Grid = styled.div<GridProps>`
+  margin-top: 20px;
+
   font-size: 1.6rem;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
-  margin: auto;
   gap: 20px;
   
   @media (min-width: 682px) {
