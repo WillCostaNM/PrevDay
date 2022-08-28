@@ -18,9 +18,14 @@ export const Container = styled.ul`
   background: #585656;
   width: 100%;
   z-index: 2;
+  overflow: hidden;
 `;
 
 export const City = styled.li<CityListProps>`
-  padding: 8px;
+  padding: 16px;
   background-color: ${({index, cursor}) => cursor === index ? 'rgb(110, 110, 110)' : ''};
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(110, 110, 110);
+  }
 `;
