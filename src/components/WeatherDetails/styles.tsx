@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 100%;
   margin-top: 20px;
   display: grid;
-  gap: 8px;
+  gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 `;
 
@@ -19,6 +19,7 @@ export const Detail = styled.div`
   justify-content: center;
   border-left: 6px solid red;
   white-space: nowrap;
+  
   & div{
     font-size: 1.5rem;
     margin-top: 8px;
