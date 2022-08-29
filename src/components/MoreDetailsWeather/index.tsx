@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownLong, faUpLong, faDroplet, faSun } from "@fortawesome/free-solid-svg-icons";
-
 import { Column, WeatherDetails } from "components";
 import { useSelector } from "react-redux";
 import { State } from "store/reducers";

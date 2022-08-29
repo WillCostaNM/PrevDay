@@ -14,11 +14,6 @@ export const Grid = styled.div<GridProps>`
   @media (min-width: 680px) {
     max-width: 780px;
   }
-
-/*   
-  @media (min-width: 900px){
-    max-width: 1000px;
-  }
-*/
+  
   ${space}
 `;

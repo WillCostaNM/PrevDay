@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { weekdayCreators } from "store/creators";
 import {State} from "store/reducers";
-import {Weather} from "interfaces";
 
 import { Weekday, WeatherDetails } from "components";
 import { Container } from "./styles";
@@ -63,8 +62,5 @@ export const WeekWeather = () => {
         )
       })}
     </Container>
-
   )
 }
-
-// {clicked && <DropDown key={`dropdown-${dayName}`} style={{height: '150px', backgroundColor: 'blue', width: '100%'}}/>}

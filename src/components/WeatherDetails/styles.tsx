@@ -1,7 +1,4 @@
 import styled from "styled-components";
-// import {space, SpaceProps} from "styled-system";
-
-// type GridProps = SpaceProps;
 
 export const Container = styled.div`
   width: 100%;

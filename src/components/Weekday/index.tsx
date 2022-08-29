@@ -1,4 +1,4 @@
-import React, {MouseEventHandler, useState} from "react";
+import React, {useState} from "react";
 import { Container, MobileWrapper } from "./style";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

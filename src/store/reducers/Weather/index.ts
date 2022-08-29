@@ -1,7 +1,6 @@
 import { Type } from './type';
 import { Action } from './actions';
 import {Weather, ErrorWeather} from 'interfaces';
-import {Reducer} from 'redux';
 
 type ResponseType = {
   isLoading: boolean,

@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import {px2vw} from '../utils/px2vw';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -15,7 +14,6 @@ export const GlobalStyle = createGlobalStyle`
     @media screen and (min-width: 768px){
       font-size: 54%;
     }
-    /* font-size: 50%; */
   }
 
   
@@ -31,19 +29,6 @@ export const GlobalStyle = createGlobalStyle`
   h4{
     font-size: 2rem;
   }
-  
-/* 
-  :root{
-    font-size: ${px2vw(24)};
-
-      @media (min-width: 768px) {
-        font-size: ${px2vw(18)};
-      }
-
-      @media (min-width: 1024px) {
-        font-size: ${px2vw(16)};
-      }
-  } */
 
   body{
     background: ${({theme})=>theme.colors.primary};

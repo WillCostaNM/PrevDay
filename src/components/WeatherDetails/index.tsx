@@ -172,11 +172,6 @@ export const WeatherDetails: React.FC<WeatherDetailsProps> = ({forecastdayDetail
           {moonPhase}
         </Row>
       </Mooon>
-      
-      {/* {details.map((detail, index) => <Detail key={`detail-${detail}`}>
-        <h5>{detail}</h5>
-        <Row p={'8px'}></Row>
-      </Detail> )} */}
     </Container>
   )
 }

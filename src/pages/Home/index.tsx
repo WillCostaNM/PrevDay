@@ -1,6 +1,5 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import {ErrorWeather, ResponseError, Weather, Location} from "interfaces";
@@ -8,7 +7,7 @@ import { weatherCreators } from "store/creators";
 import axios, { AxiosError } from "axios";
 
 import { Container, WeekWrapper, NavWrapper, Grid, MoreDetailsWrapper } from "./styles";
-import { TodaysWeather, Column, Input, WeekWeather, Search, Row, MoreDetailsWeather } from "components";
+import { TodaysWeather, Column, WeekWeather, Search, MoreDetailsWeather } from "components";
 
 // CRIAR ESQUEMA DE PASTA UTILS !!!!!!
 export const Home = () => {
@@ -17,21 +16,6 @@ export const Home = () => {
   const {setWeather, setError, fetching} = bindActionCreators(weatherCreators, dispatch);
 
   const [city, setCity] = useState('Sao Paulo');
-  // const [searchValue, setSearchValue] = useState('');
-  
-  // const [cities, setCities] = useState<Location[]>([]);
-  
-
-  // useEffect(()=>{
-  //   async function getCities(){
-  //     if(searchValue){
-  //       const response = await axios.get(`http://api.weatherapi.com/v1/search.json?key=${process.env.REACT_APP_API_KEY}&q=${searchValue}&days=7&lang=pt`);
-  //       setCities(response.data as Location[]);
-  //     }
-  //   }
-
-  //   getCities();
-  // }, [searchValue]);
 
   const apiSecret = process.env.REACT_APP_API_KEY;
 

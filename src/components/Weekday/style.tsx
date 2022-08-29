@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import { space, SpaceProps } from "styled-system";
 
 type ContainerProps = {
   weekday: string,
@@ -74,6 +73,7 @@ export const Container = styled.div<ContainerProps>`
     cursor: pointer;
     margin-bottom: 0;
     background-image: ${({date, weekday}) => date === weekday ? 'linear-gradient(150deg, #7FA9FF, #4e89fd)' : ''};
+
   }
 `;
 
@@ -82,7 +82,6 @@ export const MobileWrapper = styled.div<MobileWrapperProps>`
 
   @media (max-width: 681px){
     overflow: hidden;
-    /* max-height: ${({clicked}) => clicked ? '1000px' : '0'}; */
 
     ${({clicked}) => {
       if(clicked){
